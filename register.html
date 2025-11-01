@@ -6,11 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Automa.io - Create Account</title>
   <script>
-    // Verifica o localStorage IMEDIATAMENTE
     if (localStorage.getItem('usuarioLogado') === 'true') {
 
-      // Se o usuário já está logado, não deixa ele ver esta página.
-      // Redireciona ele para o dashboard.
       alert('Você já está logado. Redirecionando para sua área...');
       window.location.href = 'automations.html';
     }
@@ -119,7 +116,7 @@
                 </div>
               </div>
 
-             <div class="mb-3">
+              <div class="mb-3">
                 <label for="confirm-password" class="form-label">Confirm password</label>
                 <div class="input-group">
                   <input type="password" class="form-control form-control-lg border-end-0" id="confirm-password"
@@ -157,8 +154,9 @@
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
 
-  <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
   <script>
     $(document).ready(function () {
       $('#phone').mask('(00) 00000-0000');
@@ -166,57 +164,43 @@
     });
   </script>
 
-<script>
-  // Pega todos os formulários que precisam de validação
-  var forms = document.querySelectorAll('.needs-validation')
+  <script>
+    var forms = document.querySelectorAll('.needs-validation')
 
-  // Faz um loop neles
-  Array.prototype.slice.call(forms)
-    .forEach(function (form) {
-      form.addEventListener('submit', function (event) {
-        
-        // --- INÍCIO DA LÓGICA DE COMPARAÇÃO DE SENHA ---
-        const passwordInput = document.getElementById('password');
-        const confirmPasswordInput = document.getElementById('confirm-password');
+    Array.prototype.slice.call(forms)
+      .forEach(function (form) {
+        form.addEventListener('submit', function (event) {
 
-        if (passwordInput.value !== confirmPasswordInput.value) {
-          // Se as senhas NÃO baterem:
-          // 1. Define uma mensagem de erro customizada
-          confirmPasswordInput.setCustomValidity('As senhas não conferem.');
-        } else {
-          // Se as senhas BATEREM:
-          // 2. Limpa a mensagem (IMPORTANTE)
-          confirmPasswordInput.setCustomValidity('');
-        }
-        // --- FIM DA LÓGICA DE COMPARAÇÃO DE SENHA ---
+          const passwordInput = document.getElementById('password');
+          const confirmPasswordInput = document.getElementById('confirm-password');
+
+          if (passwordInput.value !== confirmPasswordInput.value) {
+            confirmPasswordInput.setCustomValidity('As senhas não conferem.');
+          } else {
+            confirmPasswordInput.setCustomValidity('');
+          }
 
 
-        // Previne o envio padrão (agora que a checagem foi feita)
-        event.preventDefault();
-        event.stopPropagation();
+          event.preventDefault();
+          event.stopPropagation();
 
-        if (!form.checkValidity()) {
-          // Se for INVÁLIDO (incluindo o nosso erro customizado), mostra os erros
-          form.classList.add('was-validated');
-        } else {
-          // Se for VÁLIDO:
-          
-          // (ID 14) "Loga" o usuário salvando a flag de login
-          localStorage.setItem('usuarioLogado', 'true');
-          
-          // (Opcional, mas bom) Salva o nome e email do usuário
-          const email = document.getElementById('email').value;
-          const name = document.getElementById('fullname').value;
-          localStorage.setItem('usuarioNome', name);
-          localStorage.setItem('usuarioEmail', email);
-          
-          // Redireciona para a área privada
-          alert('Registro bem-sucedido! Você agora está logado.');
-          window.location.href = 'automations.html';
-        }
-      }, false)
-    })
-</script>
+          if (!form.checkValidity()) {
+            form.classList.add('was-validated');
+          } else {
+
+            localStorage.setItem('usuarioLogado', 'true');
+
+            const email = document.getElementById('email').value;
+            const name = document.getElementById('fullname').value;
+            localStorage.setItem('usuarioNome', name);
+            localStorage.setItem('usuarioEmail', email);
+
+            alert('Registro bem-sucedido! Você agora está logado.');
+            window.location.href = 'automations.html';
+          }
+        }, false)
+      })
+  </script>
   <script>
     const cepInput = document.getElementById('cep');
     const ruaInput = document.getElementById('rua');

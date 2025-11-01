@@ -10,8 +10,9 @@ A aplicação foi construída com **Bootstrap 5**, **Sass (SCSS)**, e **JavaScri
 
 ## 2. Links do Projeto
 
-* **Prototipação no Figma (ID 01):** `[https://www.figma.com/design/uryimLbfDaLZd2i0w1Ukfu/SIEC-AUTOMAIO?node-id=0-1&t=llfraMa4zN06GuGi-1]`
-* **Link para o site em produção:** `[COLOQUE SEU LINK DO GITHUB PAGES AQUI (depois do deploy)]`
+* **Prototipação no Figma (ID 01):** [https://www.figma.com/design/uryimLbfDaLZd2i0w1Ukfu/SIEC-AUTOMAIO](https://www.figma.com/design/uryimLbfDaLZd2i0w1Ukfu/SIEC-AUTOMAIO)
+* **Site em Produção (GitHub Pages):** [https://eduardoportesbueno.github.io/automaio/](https://eduardoportesbueno.github.io/automaio/)
+* **Repositório GitHub:** [https://github.com/EduardoPortesBueno/automaio](https://github.com/EduardoPortesBueno/automaio)
 
 ## 3. Tecnologias Utilizadas
 
@@ -26,20 +27,13 @@ A aplicação foi construída com **Bootstrap 5**, **Sass (SCSS)**, e **JavaScri
     * ESLint (Linter de código)
     * Prettier (Formatador de código)
 
-## 4. Telas da Aplicação
-
-
-| Home Page | Página de Login | Dashboard (Automações) |
-| :---: | :---: | :---: |
-| [Imagem da Home] | [Imagem do Login] | [Imagem do Dashboard] |
-
-## 5. Instruções de Execução Local
+## 4. Instruções de Execução Local
 
 Este projeto requer dois terminais rodando simultaneamente (um para a API e outro para o Sass).
 
 1.  **Clone o repositório:**
     ```bash
-    git clone [https://github.com/EduardoPortesBueno/automaio.git]
+    git clone [https://github.com/EduardoPortesBueno/automaio.git](https://github.com/EduardoPortesBueno/automaio.git)
     cd automaio
     ```
 2.  **Instale as dependências:**
@@ -78,11 +72,11 @@ Este projeto requer dois terminais rodando simultaneamente (um para a API e outr
 - [x] **ID 11 (Validação HTML Nativa):** Os formulários de Login, Registro e Nova Automação usam `required` e os scripts de validação (`.needs-validation`) do Bootstrap.
 - [x] **ID 12 (REGEX):** O campo de Telefone (`register.html`) usa um `pattern` HTML com REGEX para validar o formato.
 - [x] **ID 13 (Elementos de Seleção):** Utiliza `<select>`, `<textarea>` e botões-toggle (que atuam como checkboxes).
-- [x] **ID 14 (Web Storage):** O `localStorage` é usado para persistir o estado de login do usuário (criar o login e o logout).
+- [x] **ID 14 (Web Storage):** O `localStorage` é usado para persistir o estado de login do usuário (criar o login, logout e guardiões).
 
 ### RA3 - Ferramentas
 - [x] **ID 15 (Node.js e NPM):** `package.json` é usado para gerenciar todas as dependências (Bootstrap, Sass, JSON Server, ESLint).
-- [x] **ID 16 (Git/GitHub):** O projeto foi versionado no Git, usa `.gitignore`, e está hospedado no GitHub.
+- [x] **ID 16 (Git/GitHub):** O projeto foi versionado no Git, usa `.gitignore`, e está hospedado no GitHub Pages.
 - [x] **ID 17 (README.md):** Este `README.md` segue o padrão da disciplina.
 - [x] **ID 18 (Organização de Arquivos):** O projeto segue a estrutura modular (`/scss`, `/css`, `/img`, `db.json`).
 - [x] **ID 19 (Linters e Formatadores):** O projeto está configurado com ESLint (`.eslintrc.json`) e Prettier (`.prettierrc.json`).
