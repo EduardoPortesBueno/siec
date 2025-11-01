@@ -283,16 +283,22 @@
                 </div>
 
                 <div class="col-12 col-lg-7">
-                    <form action="#" method="POST">
+                    <form action="#" method="POST" id="contactForm" class="needs-validation" novalidate>
                         <div class="mb-3">
                             <label for="nome" class="form-label">Nome Completo</label>
                             <input type="text" class="form-control" id="nome" placeholder="Seu nome completo"
                                 required />
+                                <div class="invalid-feedback">
+                                Por favor, preencha seu nome.
+                            </div>
                         </div>
                         <div class="mb-3">
                             <label for="email" class="form-label">Seu melhor email</label>
                             <input type="email" class="form-control" id="email" placeholder="email@exemplo.com"
                                 required />
+                                <div class="invalid-feedback">
+                                Por favor, insira um e-mail válido.
+                            </div>
                         </div>
                         <div class="mb-3">
                             <label for="mensagem" class="form-label">Como podemos te ajudar?</label>
@@ -326,6 +332,30 @@
             }
         });
     </script>
+    <script>
+      const contactForm = document.getElementById('contactForm');
+      
+      if (contactForm) {
+        
+        contactForm.addEventListener('submit', function (event) {
+          event.preventDefault();
+          event.stopPropagation();
+
+          if (!contactForm.checkValidity()) {
+            contactForm.classList.add('was-validated');
+          } else {
+            contactForm.classList.remove('was-validated');
+            
+            alert('Obrigado pelo seu contato! Sua mensagem foi enviada com sucesso.');
+            
+            contactForm.reset(); 
+          }
+        }, false);
+      }
+    </script>
+
+</body>
+</html>
 </body>
 
 </html>
