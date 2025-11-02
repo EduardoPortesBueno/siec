@@ -1,54 +1,42 @@
-// 1. Importar nossas variáveis e customizações (ID 07)
-// Isto deve vir ANTES de importar o Bootstrap para sobrescrever as variáveis.
 @import 'custom/variables';
 
-// 2. Importar o Bootstrap
-// Incluímos todo o código-fonte Sass do Bootstrap
 @import '../node_modules/bootstrap/scss/bootstrap';
 
-// 3. Nossos estilos customizados (ID 03: CSS Puro)
-// Colocamos nossas regras DEPOIS de importar o Bootstrap
-
-// Estilo para os ícones na seção "Exemplos de Automações"
 .icon-bg {
   width: 3rem;
   height: 3rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: $gray-200; // Variável do Bootstrap
+  background-color: $gray-200; 
   color: $gray-700;
   border-radius: 0.5rem;
   font-size: 1.5rem;
 }
 
-// Estilo para os avatares na seção "Testemunhos"
 .avatar-img {
   width: 5rem;
   height: 5rem;
   object-fit: cover;
 }
 
-// Estilo para os ícones de contato no footer
 .social-icon {
   font-size: 1.5rem;
   color: $gray-600;
   transition: color 0.2s;
 
   &:hover {
-    color: $primary; // Nossa variável $primary (laranja)
+    color: $primary;
   }
-} // <--- !! ESTA É A CHAVE '}' QUE FALTAVA !!
+}
 
-// Estilo customizado para botão com ícone (ID 03: CSS Puro)
-// (Removida a duplicata)
+
 .btn-icon-text {
   display: inline-flex;
   align-items: center;
   justify-content: center;
 
   .bi {
-    // (ID 05: Unidade relativa)
     margin-right: 0.5rem;
     font-size: 1.1rem;
   }

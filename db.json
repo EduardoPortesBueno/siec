@@ -1,4 +1,25 @@
 {
   "automations": [
+    {
+      "company": "1",
+      "name": "dsada",
+      "description": "dsada",
+      "systems": [
+        "Slack",
+        "Open Ia"
+      ],
+      "id": 1
+    },
+    {
+      "company": "1",
+      "name": "Teste do Roni",
+      "description": "Gostaria ....",
+      "systems": [
+        "Supabase",
+        "Salesforce",
+        "Google Sheets"
+      ],
+      "id": 2
+    }
   ]
 }

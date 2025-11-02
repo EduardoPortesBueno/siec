@@ -1,1 +1,15 @@
+# Dependências do Node 
+/node_modules/
 
+# Arquivos de Log do NPM
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Arquivos de Mapa do Sass 
+/css/style.css.map
+
+# Arquivos de sistema 
+.DS_Store
+Thumbs.db

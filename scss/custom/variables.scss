@@ -1,17 +1,11 @@
-// 1. Cores
-// Definindo o laranja do design como a cor primária do Bootstrap
 $primary: #f77f00;
 
-// 2. Habilitar Tipografia Fluida (ID 08)
 $enable-responsive-font-sizes: true;
-// 3. Customização da Largura do Container (ID 07)
-// Por padrão, o Bootstrap limita o container. Vamos aumentar esse limite
-// para que o site "preencha mais a tela" em monitores grandes.
+
 $container-max-widths: (
   sm: 540px,
   md: 720px,
   lg: 960px,
   xl: 1200px,
-  // Padrão era 1140px
-  xxl: 1400px, // Padrão era 1320px
+  xxl: 1400px, 
 );
